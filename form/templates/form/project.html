@@ -73,11 +73,15 @@
               <label for="Name">Name:&nbsp;&nbsp;&nbsp;</label>
               <input type="text" name="Name" />
             </div>
-
-            <br />
+            {% if check %}
+            <div class="alert alert-danger" role="alert" id="error">
+              Name doesn't exist
+            </div>
+            {% endif %}
             <input type="submit" value="Search" class="btn btn-sm btn-info" />
           </form>
         </div>
+
         <div class="col-md-6">
           <div class="card card-body">
             <table class="table table-sm">
