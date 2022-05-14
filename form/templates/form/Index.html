@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CFI App</title>
+    <link rel="stylesheet" href="{% static '/css/Style.css' %}" />
+  </head>
+  <body>
+    <div class="landing-page">
+      <div class="nav-bar">
+        <ul class="nav-items">
+          <li><a href="" id="logo">DK</a></li>
+        </ul>
+        <a href="https://github.com/DK-GitHub-DK" id="github" target="_blank"
+          >GitHub</a
+        >
+      </div>
+      <div class="image">
+        <img src="{% static '/images/Portfolio2.png' %}" alt="" />
+      </div>
+      <div class="main-content">
+        <p class="hello">
+          <span class="line"> </span>
+          Hello
+        </p>
+        <p class="name">I'm<span class="first-name">Dheeraj</span>Kumar</p>
+        <p class="intro">
+          An aspiring Full-Stack Developer and your new Project Member
+        </p>
+        <div class="CTA">
+          <span class="button"
+            ><a
+              href="E-Cell_Manager_2022_Webops_Dheeraj_AE21B016.pdf"
+              target="_blank"
+              >Application</a
+            ></span
+          >
+          <span class="button"><a href={% url 'project' %}>Project</a></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
