@@ -18,15 +18,62 @@
     <div class="main-content">
       <div class="form">
         <form action="" method="POST">
-          {% csrf_token%} {{form}}
+          <input
+            type="hidden"
+            name="csrfmiddlewaretoken"
+            value="0w9xOrCsQ1gI92xh4mYFub4KL8GR7htPrJRcL704P0cfm3h1SvLiua2bl4zBS88s"
+          />
+          <div class="form-element">
+            <label for="id_name">Name:</label
+            ><input
+              type="text"
+              name="name"
+              maxlength="200"
+              required=""
+              id="id_name"
+            />
+          </div>
+          <div class="form-element">
+            <label for="id_phone">Phone:</label
+            ><input
+              type="text"
+              name="phone"
+              maxlength="10"
+              required=""
+              id="id_phone"
+            />
+          </div>
+          <div class="form-element">
+            <label for="id_age">Age:</label
+            ><input
+              type="text"
+              name="age"
+              maxlength="3"
+              required=""
+              id="id_age"
+            />
+          </div>
+          <div class="form-element">
+            <label for="id_city">City:</label
+            ><input
+              type="text"
+              name="city"
+              maxlength="200"
+              required=""
+              id="id_city"
+            />
+          </div>
           <input class="btn btn-sm btn-success" type="submit" name="Submit" />
         </form>
       </div>
       <div class="table-container">
         <div class="table-search">
           <form action="" method="GET">
-            <label for="BookName">BookName:&nbsp;&nbsp;&nbsp;</label>
-            <input type="text" name="BookName" />
+            <div class="name">
+              <label for="Name">Name:&nbsp;&nbsp;&nbsp;</label>
+              <input type="text" name="Name" />
+            </div>
+
             <br />
             <input type="submit" value="Search" class="btn btn-sm btn-info" />
           </form>

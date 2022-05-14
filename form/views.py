@@ -17,5 +17,9 @@ def project(request):
         if form.is_valid():
             form.save()
             return redirect('/project')
+    
+
+    username = request.GET.get('Name')
+    users = users.filter(name = username)
     context = {'form': form, "users": users}
     return render(request, 'form/project.html', context)
