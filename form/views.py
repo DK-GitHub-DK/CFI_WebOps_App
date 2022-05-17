@@ -9,7 +9,7 @@ def home(request):
     return render(request, 'form/index.html')
 
 def project(request):
-    check = True
+    
     users = customer.objects.all()
     form = CustomerForm()
     if request.method == 'POST':
@@ -21,6 +21,7 @@ def project(request):
     
 
     username = request.GET.get('Name')
+    check = bool(username)
     for i in list(users):
         if username == i.name or username == '':
             check = False

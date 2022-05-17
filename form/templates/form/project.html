@@ -18,11 +18,12 @@
     <div class="main-content">
       <div class="form">
         <form action="" method="POST">
-          <input
+          {% csrf_token %}
+          <!-- <input
             type="hidden"
             name="csrfmiddlewaretoken"
             value="0w9xOrCsQ1gI92xh4mYFub4KL8GR7htPrJRcL704P0cfm3h1SvLiua2bl4zBS88s"
-          />
+          /> -->
           <div class="form-element">
             <label for="id_name">Name:</label
             ><input
