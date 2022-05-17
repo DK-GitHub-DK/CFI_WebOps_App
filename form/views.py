@@ -22,8 +22,11 @@ def project(request):
 
     username = request.GET.get('Name')
     for i in list(users):
-        if username == i.name:
+        if username == i.name or username == '':
             check = False
-    users = users.filter(name = username)
-    context = {'form': form, "users": users, "check":check}
+    filteredUsers = users.filter(name = username)
+    if username == "_all_" or username == "_All_":
+        filteredUsers = users
+        check = False
+    context = {'form': form, "users": filteredUsers, "check":check}
     return render(request, 'form/project.html', context)
